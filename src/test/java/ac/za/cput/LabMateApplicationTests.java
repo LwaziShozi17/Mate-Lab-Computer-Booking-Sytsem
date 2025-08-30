@@ -1,4 +1,4 @@
-package za.ca.cput;
+package ac.za.cput;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

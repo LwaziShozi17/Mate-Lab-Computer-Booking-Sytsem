@@ -1,4 +1,4 @@
-package za.ca.cput.service;
+package ac.za.cput.service;
 
 public interface IService<T, ID> {
     T create(T t);
