@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.*;
 import za.ac.cput.domain.Booking;
 import za.ac.cput.domain.Computer;
 import za.ac.cput.service.ComputerService;
-
 import java.util.List;
 import java.util.Map;
 

@@ -2,6 +2,7 @@ package za.ac.cput.factory;
 
 import za.ac.cput.domain.Computer;
 
+
 public class ComputerFactory {
     public static Computer createComputer(String computerId, String labId, String faculty, String status, String software) {
 
