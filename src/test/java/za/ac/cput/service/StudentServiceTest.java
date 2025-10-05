@@ -19,8 +19,8 @@ class StudentServiceTest {
     private IStudent studentService;
 
     private Student student = StudentFactory.createStudent(
-            "Sandile",
-            "Sibiya",
+            "Lwazi",
+            "Shozi",
             "210975623@mycput.ac.za",
             "password",
             210975623L,

@@ -16,14 +16,15 @@
         }
 
         /* Menu icon */
-        .menu-icon {
+        .back-icon {
           position: absolute;
           top: 20px;
           left: 20px;
-          background-color: white;
+          background-color:transparent;
           padding: 8px;
           border-radius: 4px;
           cursor: pointer;
+
         }
         .menu-icon div {
           width: 25px;
@@ -136,11 +137,9 @@
 </head>
 <body>
 
-<!-- Menu icon -->
-<div class="menu-icon">
-    <div></div>
-    <div></div>
-    <div></div>
+<!-- Back icon -->
+<div class="back-icon">
+    &#8592;
 </div>
 
 <!-- CPUT Logo -->
@@ -157,8 +156,8 @@
 <!-- Circle image -->
 <div class="circle">
     <div>
-        <img src="https://icon-library.com/images/desktop-computer-icon-png/desktop-computer-icon-png-1.jpg" alt="Computer">
-        <p>Click. Book. Study</p>
+        <img src="https://raw.githubusercontent.com/LwaziShozi17/Mate-Lab-Computer-Booking-Sytsem/master/src/Static%20(Front-End)/Computer-icon.jpg" alt="Computer">
+        <p>Click. Maintain. Report</p>
     </div>
 </div>
 
@@ -178,7 +177,7 @@
     </div>
     <div class="nav-item">
         <i class="fa-solid fa-list"></a></i>
-        MAINTANANCE
+        MAINTENANCE
     </div>
     <div class="nav-item">
         <i class="fa-solid fa-circle-info"><a href=""></a></i>
@@ -187,6 +186,12 @@
 </div>
 
 <script>
+    // function for back icon to reference
+    const backIcon = document.querySelector('.back-icon');
+    backIcon.addEventListener('click', () => {
+        window.location.href = 'LogIn.html';
+    });
+
     // Retrieve student information from session storage
       const studentData = JSON.parse(sessionStorage.getItem('currentStudent'));
 
@@ -213,7 +218,7 @@
       });
 
       bookBtn.addEventListener('click', () => {
-        window.location.href = 'Compter.html';
+        window.location.href = 'Computer.html';
       });
 
       loadBookingNav.addEventListener('click', () => {

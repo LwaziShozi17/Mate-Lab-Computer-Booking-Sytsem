@@ -20,11 +20,11 @@ class ComputerServiceTest {
     private IComputer computerService;
 
     private Computer computer = ComputerFactory.createComputer(
-            "C-119",
-            "Lab-10",
-            "Information",
+            "C-115",
+            "Lab-30",
+            "Business",
             "Available",
-            "Cisco Packet tracer"
+            "Microsoft 365 Apps"
     );
 
     @Test
