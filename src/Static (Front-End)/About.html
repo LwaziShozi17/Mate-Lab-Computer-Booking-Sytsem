@@ -3,28 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
+    <title>About Us | LabMate</title>
+
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <title>About</title>
+
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: "Segoe UI", Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #d9d9d9;
+            background-color: #f4f6f9;
+            color: #333;
+        }
+
+        /* Header / Logo section */
+        .header {
             text-align: center;
+            padding-top: 30px;
         }
-
-        /* CPUT Logo */
         .icon {
-            max-width: 180px;
-            margin-top: 30px;
+            max-width: 140px;
         }
-
-        /* Logo */
         .logo {
-            font-size: 28px;
+            font-size: 30px;
             font-weight: bold;
             margin-top: 10px;
         }
@@ -32,55 +34,77 @@
             color: #2f4db3;
         }
         .tagline {
-            font-size: 12px;
-            color: #444;
-            margin-bottom: 30px;
+            font-size: 13px;
+            color: #555;
+            margin-bottom: 20px;
         }
 
-        /* Content Section */
+        /* Main content card */
         .content-container {
-            width: 80%;
-            margin: 20px auto 80px auto;
-            padding: 15px;
-            background: #e6e6e6;
-            border-radius: 10px;
-            box-shadow: 0px 2px 6px rgba(0,0,0,0.2);
+            width: 85%;
+            margin: 0 auto 90px auto;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            padding: 30px 20px;
         }
 
-        .content-container h2 {
+        h2 {
             text-align: center;
+            color: #2f4db3;
             margin-bottom: 10px;
-            color: #333;
         }
 
         .content-container img {
             display: block;
-            margin: 0 auto 20px auto;
-            max-width: 100%;
-            border-radius: 8px;
+            margin: 0 auto 25px auto;
+            width: 50%; /* 👈 Minimized image */
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
         }
 
         .section {
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
 
         .section h3 {
             text-align: center;
-            margin: 10px 0;
-            font-size: 18px;
-            font-weight: bold;
             color: #111;
+            font-size: 18px;
+            margin-bottom: 8px;
         }
 
         .section p, .section ul {
             font-size: 15px;
-            color: #333;
             line-height: 1.6;
             text-align: justify;
+            margin: 0 auto;
+            max-width: 90%;
         }
 
         .section ul {
-            margin: 10px 0 0 20px;
+            margin-left: 20px;
+        }
+
+        /* Contact section */
+        .contact-section {
+            background: #f2f4fc;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            margin-top: 30px;
+        }
+        .contact-section h3 {
+            color: #2f4db3;
+            margin-bottom: 10px;
+        }
+        .contact-section p {
+            font-size: 15px;
+            margin: 5px 0;
+        }
+        .contact-section i {
+            margin-right: 6px;
+            color: #2f4db3;
         }
 
         /* Bottom navigation */
@@ -101,18 +125,13 @@
             font-size: 11px;
             cursor: pointer;
         }
+
         .nav-item i {
             font-size: 18px;
             display: block;
             margin-bottom: 3px;
         }
-        .book-btn img {
-            width: 50px;
-            height: 40px;
-        }
 
-
-        /* Book button in center */
         .book-btn {
             background-color: white;
             color: black;
@@ -130,135 +149,84 @@
             font-size: 11px;
             cursor: pointer;
         }
-        .book-btn i {
-            font-size: 18px;
-            margin-bottom: 3px;
-=======
-            background-color: #f4f6f9;
-            color: #333;
-        }
-        header {
-            background-color: #004080;
-            color: white;
-            padding: 15px;
-            text-align: center;
-        }
-        main {
-            padding: 20px;
-            max-width: 900px;
-            margin: auto;
-        }
-        h1, h2 {
-            color: #004080;
-        }
-        p {
-            line-height: 1.6;
-        }
-        .about-box {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
-            margin-top: 20px;
->>>>>>> origin/230975623
+
+        .book-btn img {
+            width: 50px;
+            height: 40px;
         }
     </style>
 </head>
 <body>
 
-<!-- CPUT Logo -->
-<img src="https://vectorseek.com/wp-content/uploads/2023/08/Cput-Logo-Vector.svg-.png" alt="CPUT Logo" class="icon"/>
+<div class="header">
+    <img src="https://vectorseek.com/wp-content/uploads/2023/08/Cput-Logo-Vector.svg-.png" alt="CPUT Logo" class="icon"/>
+    <div class="logo">Lab<span>Mate</span></div>
+    <div class="tagline">For the love of computing</div>
+</div>
 
-<!-- Logo -->
-<div class="logo">Lab<span>Mate</span></div>
-<div class="tagline">For the love of computing</div>
-
-<!-- About Section -->
+<!-- About Content -->
 <div class="content-container">
     <h2>About Us</h2>
     <img src="https://ayinfotechgh.com/wp-content/uploads/2019/10/AY-Infotechgh-Computer-lab.jpg" alt="Computer Lab Image">
 
     <div class="section">
-        <h3>ABOUT US</h3>
+        <h3>Who We Are</h3>
         <p>
-            Welcome to LabMate, your ultimate assistant for booking university computer labs quickly, fairly,
-            and efficiently. Designed by students, for students, LabMate ensures that access to limited lab
-            resources is organized based on your faculty, your course, and your needs.
+            Welcome to <b>LabMate</b> — your trusted assistant for booking university computer labs quickly, fairly,
+            and efficiently. Designed by students, for students, LabMate ensures that access to limited lab resources
+            is organized based on your faculty, your course, and your needs.
         </p>
     </div>
 
     <div class="section">
-        <h3>OUR MISSION</h3>
+        <h3>Our Mission</h3>
         <p>
             Our mission is simple: to give every student fair access to the computing resources they need,
-            without the hassle. Whether you're a design student needing high-end machines, or a CS major
+            without the hassle. Whether you're a design student needing high-end machines or a CS major
             prepping for a coding exam, LabMate ensures you never miss a lab session again.
         </p>
     </div>
 
     <div class="section">
-        <h3>KEY FEATURES</h3>
+        <h3>Key Features</h3>
         <ul>
-            <li>You get lab access when you actually need it.</li>
-            <li>Priority is given to those who require specific software or environments.</li>
-            <li>Fair usage across departments.</li>
+            <li>Access labs when you truly need them.</li>
+            <li>Priority based on course requirements and software needs.</li>
+            <li>Fair and transparent booking across all departments.</li>
         </ul>
+    </div>
+
+    <div class="contact-section">
+        <h3>Contact Information</h3>
+        <p><i class="fa-solid fa-envelope"></i> <b>Email:</b> lwaziShozi@cput.ac.za</p>
+        <p><i class="fa-solid fa-phone"></i> <b>Phone:</b> 065 897 5544</p>
+        <p>For more information or support, feel free to reach out to our admin team.</p>
     </div>
 </div>
 
-<!-- Bottom nav -->
+<!-- Bottom Navigation -->
 <div class="bottom-nav">
-    <div class="nav-item">
-        <i class="fa-solid fa-house"></a></i>
+    <div class="nav-item" onclick="window.location.href='Home.html'">
+        <i class="fa-solid fa-house"></i>
         HOME
     </div>
-    <div class="nav-item">
-        <i class="fa-solid fa-user"><a href=""></a></i>
+    <div class="nav-item" onclick="window.location.href='Profile.html'">
+        <i class="fa-solid fa-user"></i>
         PROFILE
     </div>
-    <div class="book-btn">
-        <img src="https://static.vecteezy.com/system/resources/previews/010/366/243/large_2x/computer-icon-transparent-free-png.png" alt="book"></a>
+    <div class="book-btn" onclick="window.location.href='Book.html'">
+        <img src="https://static.vecteezy.com/system/resources/previews/010/366/243/large_2x/computer-icon-transparent-free-png.png" alt="book">
         BOOK
     </div>
-    <div class="nav-item">
-        <i class="fa-solid fa-list"></a></i>
+    <div class="nav-item" onclick="window.location.href='LoadBooking.html'">
+        <i class="fa-solid fa-list"></i>
         LOAD BOOKING
     </div>
-    <div class="nav-item">
-        <i class="fa-solid fa-circle-info"><a href=""></a></i>
+    <div class="nav-item" onclick="window.location.href='About.html'">
+        <i class="fa-solid fa-circle-info"></i>
         ABOUT
     </div>
 </div>
-<script>
-    // function for navigation bar to reference
-    document.addEventListener('DOMContentLoaded', () => {
-        // Select navigation items
-        const homeNav = document.querySelector('.bottom-nav .nav-item:nth-child(1)');
-        const profileNav = document.querySelector('.bottom-nav .nav-item:nth-child(2)');
-        const bookBtn = document.querySelector('.bottom-nav .book-btn');
-        const loadBookingNav = document.querySelector('.bottom-nav .nav-item:nth-child(4)');
-        const aboutNav = document.querySelector('.bottom-nav .nav-item:nth-child(5)');
 
-        // Add event listeners for navigation
-        homeNav.addEventListener('click', () => {
-            window.location.href = 'Home.html';
-        });
-        profileNav.addEventListener('click', () => {
-            window.location.href = 'Profile.html';
-        });
-
-        bookBtn.addEventListener('click', () => {
-            window.location.href = 'Book.html';
-        });
-
-        loadBookingNav.addEventListener('click', () => {
-            window.location.href = 'LoadBooking.html';
-        });
-
-        aboutNav.addEventListener('click', () => {
-            window.location.href = 'About.html';
-        });
-    });
-</script>
 </body>
 </html>

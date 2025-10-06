@@ -10,8 +10,9 @@ import java.util.Map;
 
 @RestController
 @CrossOrigin(origins = "*")
-@RequestMapping("/http/cputlibrary.com")
+@RequestMapping("/api")
 public class BookingController {
+
     private final BookingService bookingService;
 
     @Autowired
@@ -19,18 +20,18 @@ public class BookingController {
         this.bookingService = bookingService;
     }
 
-    // Method to create booking in the database
+    // Create booking
     @PostMapping("/Book")
     public ResponseEntity<?> createBooking(@RequestBody Booking booking) {
         try {
-            Booking createBooking = bookingService.create(booking);
-            return ResponseEntity.ok(createBooking);
+            Booking createdBooking = bookingService.create(booking);
+            return ResponseEntity.ok(createdBooking);
         } catch (RuntimeException e) {
-            throw new RuntimeException("Error : Booking Already" + e.getMessage() );
+            return ResponseEntity.badRequest().body(Map.of("error", e.getMessage()));
         }
     }
 
-    // Method to search and find booking by studentId in database
+    // Get booking by studentId
     @GetMapping("/LoadBookingByStudentId/{studentId}")
     public ResponseEntity<?> findBookingByStudentId(@PathVariable Long studentId) {
         try {
@@ -46,11 +47,11 @@ public class BookingController {
                     "software", booking.getSoftware()
             ));
         } catch (RuntimeException e) {
-            System.out.println("Booking not found for studentId: " + studentId);
             return ResponseEntity.badRequest().body(Map.of("error", e.getMessage()));
         }
     }
 
+    // Get booking by bookingId
     @GetMapping("/LoadBookingByBookingId/{bookingId}")
     public ResponseEntity<?> findBookingByBookingId(@PathVariable Long bookingId) {
         try {
@@ -66,28 +67,33 @@ public class BookingController {
                     "software", booking.getSoftware()
             ));
         } catch (RuntimeException e) {
-            System.out.println("Booking not found for bookingId: " + bookingId);
             return ResponseEntity.badRequest().body(Map.of("error", e.getMessage()));
         }
     }
 
-    // Method to delete booking by studentId in the database
-    // Cancel booking by Booking ID
+    // Delete booking by bookingId
     @DeleteMapping("/CancelBookingByBookingId/{bookingId}")
     public ResponseEntity<?> deleteBookingByBookingId(@PathVariable Long bookingId) {
         try {
             bookingService.deleteByBookingId(bookingId);
-            return ResponseEntity.ok(Map.of("message", "Booking deleted successfully", "bookingId", bookingId));
+            return ResponseEntity.ok(Map.of(
+                    "message", "Booking deleted successfully",
+                    "bookingId", bookingId
+            ));
         } catch (RuntimeException e) {
             return ResponseEntity.badRequest().body(Map.of("error", e.getMessage()));
         }
     }
 
+    // Delete booking by studentId
     @DeleteMapping("/CancelBookingByStudentId/{studentId}")
     public ResponseEntity<?> deleteBookingByStudentId(@PathVariable Long studentId) {
         try {
             bookingService.deleteByStudentId(studentId);
-            return ResponseEntity.ok(Map.of("message", "Booking(s) deleted successfully", "studentId", studentId));
+            return ResponseEntity.ok(Map.of(
+                    "message", "Booking(s) deleted successfully",
+                    "studentId", studentId
+            ));
         } catch (RuntimeException e) {
             return ResponseEntity.badRequest().body(Map.of("error", e.getMessage()));
         }
