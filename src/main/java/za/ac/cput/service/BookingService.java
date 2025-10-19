@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import za.ac.cput.domain.Booking;
 import za.ac.cput.repository.BookingRepository;
-import za.ac.cput.repository.StudentRepository;
+
 
 import java.util.List;
 
@@ -104,6 +104,4 @@ public class BookingService implements IBooking {
         bookingRepository.delete(booking);
         return booking;
     }
-
-
 }
